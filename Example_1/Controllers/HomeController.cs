@@ -25,7 +25,7 @@ namespace Example_1.Controllers
             return View("MyView");
         }
 
-        public IActionResult Privacy()
+        public ViewResult RsvpForm()
         {
             return View();
         }
