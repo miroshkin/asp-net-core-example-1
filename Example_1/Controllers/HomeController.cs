@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Example_1.Models;
+using PartyInvites.Models;
 
 namespace Example_1.Controllers
 {
@@ -25,7 +26,14 @@ namespace Example_1.Controllers
             return View("MyView");
         }
 
+        [HttpGet]
         public ViewResult RsvpForm()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ViewResult RsvpForm(GuestResponse guestResponse)
         {
             return View();
         }
